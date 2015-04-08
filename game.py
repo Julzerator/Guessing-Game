@@ -7,9 +7,9 @@ print "What's your name?",
 name = raw_input()
 # choose random number between 1 and 100
 print "I've chosen a number between 1 and 100."
-num = int(random.randrange(100))
+num = int(random.randrange(100)) + 1
 
-print name + ", guess what number I've chosen!",
+print "%s, guess what number I've chosen!" % name, 
 
 # while True:
 #   get guess
