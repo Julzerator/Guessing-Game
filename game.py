@@ -18,14 +18,18 @@ print "%s, guess what number I've chosen!" % name,
 #   else:
 #       congratulate player
 while True:
-    guess = int(raw_input())
-    if guess > num:
-        print "Your guess is too high. Try again.",
-
-    elif guess < num:
-        print "Your guess is too low. Try again.",
-
-    else:
-        break
+    try:
+        guess = int(raw_input())
+        if guess > 100:
+            print "Your guess must be between 1 and 100. Dolt. Please try again."
+        elif guess < num:
+            print "Your guess is too low. Try again.",
+        elif guess > num:
+            print "Your guess is too high. Try again.",
+        else:
+            break
+    except ValueError:
+        print "I do not compute anything but numbers. What is this garbage?"
+        print "Please try again."
 
 print "Congratulations! You are now the Numbers Master!!"
